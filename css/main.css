@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=swap");
+
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --shadow: #8888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+}
+
+body {
+  background: var(--light-gray);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.main-container {
+  margin: 100px 180px;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 280px 280px 280px 280px;
+  grid-template-rows: auto;
+  grid-template-areas: "one one two five" "three four four five";
+  gap: 30px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 35px;
+  box-shadow: 0 0 15px 5px var(--shadow);
+}
+
+.card-1 {
+  background: var(--violet);
+  color: var(--white);
+  grid-area: one;
+}
+
+.card-2 {
+  background: var(--dark-grayish-blue);
+  color: var(--white);
+  grid-area: two;
+}
+
+.card-3 {
+  background: var(--white);
+  color: var(--blackish-blue);
+  grid-area: three;
+  line-height: 1.7;
+}
+
+.card-4 {
+  background: var(--blackish-blue);
+  color: var(--white);
+  grid-area: four;
+}
+
+.card-5 {
+  background: var(--white);
+  color: var(--blackish-blue);
+  grid-area: five;
+  line-height: 1.65;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  margin-right: 20px;
+}
+
+.profile-img img {
+  width: 100%;
+  border-radius: 150px;
+}
+
+.testimonial p {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.review p {
+  opacity: 0.7;
+}
+
+.profile-verif p {
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    margin: 30px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-rows: max-content;
+    grid-template-areas: "one" "two" "three" "four" "five";
+  }
+  .card {
+    height: auto;
+  }
+}/*# sourceMappingURL=main.css.map */
