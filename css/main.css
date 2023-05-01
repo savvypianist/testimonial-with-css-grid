@@ -36,7 +36,7 @@ body {
 }
 
 .main-container {
-  margin: 100px 180px;
+  margin: 0px 120px 30px;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 280px 280px 280px 280px;
@@ -114,6 +114,7 @@ body {
   opacity: 0.5;
 }
 
+
 @media only screen and (max-width: 600px) {
   .main-container {
     margin: 30px;
@@ -124,5 +125,11 @@ body {
   }
   .card {
     height: auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1280px) {
+  body {
+    transform: scale(0.8);
   }
 }/*# sourceMappingURL=main.css.map */
